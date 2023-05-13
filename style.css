@@ -19,8 +19,8 @@ body{
     grid-template-rows: 8% 80% 10% ;
     margin: 0px auto;
     text-align: center;
-    background: #ffe259;  fallback
-background: -webkit-linear-gradient(to right, #ffa751, #ffe259); 
+    background: #ffe259;  fallback ;
+background: -webkit-linear-gradient(to right, #ffa751, #ffe259);
 background: linear-gradient(to right, #ffa751, #ffe259);
 }
 
@@ -57,6 +57,9 @@ background: linear-gradient(to right, #ffa751, #ffe259);
 }
 
 
+
+
+
 .name_band{
     width: 20%;
     display: flex;
@@ -64,6 +67,7 @@ background: linear-gradient(to right, #ffa751, #ffe259);
     align-items: center;
     font-size: 50px;
     margin-left: 50px;
+    
 }
 
 .name_band h3{
@@ -89,6 +93,7 @@ background: linear-gradient(to right, #ffa751, #ffe259);
     padding: 20px;
     transition: 0.2s;
     animation: fuzz 2s linear infinite;
+    display: block;
 }
 
 @keyframes fuzz {
@@ -107,6 +112,205 @@ background: linear-gradient(to right, #ffa751, #ffe259);
     100%{
         width: 70%;
         height:80%;
+    }
+}
+
+#menu, #menu__check{
+    display: none;
+}
+
+@media only screen and (max-width: 900px) {
+    header div.name_band, header div.name_band ul, header div.name_band ul li{
+        display: inline;
+    }
+
+    header div.name_band nav{
+        width: 100%;
+        display: inline;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    header div h3{
+        margin: 0;
+        padding: 0;
+    }
+
+    header div.name_band{
+        position: absolute;
+        display: flex;
+        place-content: space-between;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        margin-left: 10px;
+    }
+    
+    #menu__check:not(:checked) ~ nav{
+    display: none;
+    }
+    
+    #menu__check:checked ~ nav{
+    display: block;
+    }
+    
+    #menu{
+        display: block;
+        font-size: 1.2em;
+        font-weight: bold;
+       position: absolute;
+       right: 0.5em;
+       top: 0.5em;
+       z-index: 9999;
+    }
+
+    #menu__cerrar{
+        display: none;
+    }
+
+    #menu__check:checked ~ label #menu__abrir{
+        display: none;
+    }
+    
+    #menu__check:checked ~ label #menu__cerrar{
+        display: block;
+    }
+
+    header nav{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        padding-top: 0.5em;
+        padding-right: 1.5em;
+        opacity: 0.8; 
+    }
+
+    header nav.nav_bar ul.nav_bar_ul{
+        display: block;
+        text-align: right;
+    }
+
+    header nav.nav_bar ul.nav_bar_ul li{
+        display: block;
+        text-align: right; 
+    }
+
+}
+
+@media all and (max-width: 900px){
+    .animation_logo {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 80%;
+        height: 50%;
+        margin-top: 15%;
+    }
+  }
+
+
+ @media all and (max-width: 800px){
+    .animation_logo {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 80%;
+        height: 50%;
+        margin-top: 15%;
+    }
+  }
+
+@media all and (max-width: 700px){
+    .animation_logo {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 80%;
+        height: 50%;
+        margin-top: 15%;
+    }
+  }
+
+  @media all and (max-width: 600px){
+    .animation_logo {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 80%;
+        height: 40%;
+        margin-top: 15%;
+    }
+  }
+   
+  @media all and (max-width: 500px){
+    .animation_logo {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 80%;
+        height: 35%;
+        margin-top: 25%;
+    }
+  }
+  
+  @media all and (max-width: 400px){
+    .animation_logo {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 80%;
+        height: 30%;
+        margin-top: 30%;
+    }
+}
+
+
+        /* --------CSS DE CONTACTO-------- */
+
+.container_img{
+    grid-column: 1 / 7;
+    grid-row: 3 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_img img{
+    width: 100px;
+    margin: 60px;
+    grid-row: 3 / 4;
+    grid-column: 1 / 7;
+}
+
+@media all and (max-width: 700px){
+    .container_img{
+        display: flex;
+    }
+
+    .container_img img{
+        width: 85px;
+        margin: 40px;
+
+    }
+} 
+
+@media (max-width: 480px){
+    .container_img{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+
+@media (max-width: 480px){
+    .container_img img{
+        width: 70px;
+        margin: 40px;
+
     }
 }
 
