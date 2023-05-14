@@ -19,7 +19,7 @@ body{
     grid-template-rows: 8% 80% 10% ;
     margin: 0px auto;
     text-align: center;
-    background: #ffe259;  fallback ;
+    background: #ffe259;   
 background: -webkit-linear-gradient(to right, #ffa751, #ffe259);
 background: linear-gradient(to right, #ffa751, #ffe259);
 }
@@ -36,6 +36,7 @@ background: linear-gradient(to right, #ffa751, #ffe259);
     width: 80%;
     display: flex;
     justify-content: space-around;
+    text-align: justify;
 
 }
 
@@ -172,6 +173,7 @@ background: linear-gradient(to right, #ffa751, #ffe259);
     #menu__check:checked ~ label #menu__abrir{
         display: none;
     }
+
     
     #menu__check:checked ~ label #menu__cerrar{
         display: block;
@@ -315,6 +317,67 @@ background: linear-gradient(to right, #ffa751, #ffe259);
 }
 
 
+/* ------css de videos musicales------- */
+ 
+main{
+    grid-column: 1 / 7;
+    grid-row: 2 / 3;
+   
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.container_card{
+    
+    width: 100%;
+   
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
+.card{
+    display: flex;
+    background-color: rgba(123, 121, 121,0.7);
+    width: 23%;
+    padding: 1%;
+    border-radius: 5%;
+    transition: 1s;
+}
+
+.card iframe{
+    width: 100%;
+}
+
+.card_4{
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .container_card .card_video{
+    display: none;
+    }  
+
+    .card_4{
+        display: block;
+        width: 40%;
+        
+    }
+
+    h5{
+        font-size: medium;
+    }
+}
+
+.card:hover{
+    
+    transform: scale(1.2);
+
+}
+
+
 .footer{
     grid-column: 1 / 7;
     grid-row: 3 / 4;
@@ -322,3 +385,5 @@ background: linear-gradient(to right, #ffa751, #ffe259);
     justify-content: center;
     align-items: center;
 }
+
+    
