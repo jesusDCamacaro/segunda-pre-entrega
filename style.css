@@ -367,9 +367,14 @@ main{
     }
 
     h5{
-        font-size: medium;
+        font-size: smaller;
     }
 }
+
+h3{
+    font-size: large;
+}
+
 
 .card:hover{
     
